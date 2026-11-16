@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#F4FAF5"
+    android:padding="24dp"
+    tools:context=".WelcomeActivity">
+
+    <!-- Logo Card Container -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logobudgie" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- App Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budgie"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Tagline -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart money management for students"
+        android:textSize="14sp"
+        android:textColor="#68826B"
+        android:gravity="center"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Get Started Button (Lab 2 Explicit Intent Style) -->
+    <Button
+        android:id="@+id/buttonGetStarted"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:onClick="openHomeDashboard" />
+
+</LinearLayout>

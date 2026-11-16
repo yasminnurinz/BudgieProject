@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4FAF5"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logobudgie" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Budgie"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smart money for students"
+                android:textSize="12sp"
+                android:textColor="#68826B" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="6dp"
+        android:padding="18dp"
+        android:orientation="vertical"
+        android:background="#4CAF50">
+
+        <TextView
+            android:id="@+id/tvMonthRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E8F5E9"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvRemainingAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="2dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBudget"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginVertical="14dp"
+            android:max="100"
+            android:progressTint="@color/white"
+            android:progressBackgroundTint="#81C784" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="#66BB6A">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Budget"
+                    android:textColor="#E8F5E9"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvBudgetAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="#66BB6A">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spent"
+                    android:textColor="#E8F5E9"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvSpentAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="14dp">
+
+        <Button
+            android:id="@+id/btnQuickExpenses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#E2F3E4"
+            android:text="Expenses"
+            android:textAllCaps="false"
+            android:textColor="#2E7D32"
+            android:textSize="11sp"
+            android:onClick="openExpenses" />
+
+        <Button
+            android:id="@+id/btnQuickBudget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#E2F3E4"
+            android:text="Budget"
+            android:textAllCaps="false"
+            android:textColor="#2E7D32"
+            android:textSize="11sp"
+            android:onClick="openBudget" />
+
+        <Button
+            android:id="@+id/btnQuickShopping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#E2F3E4"
+            android:text="Shopping"
+            android:textAllCaps="false"
+            android:textColor="#2E7D32"
+            android:textSize="11sp"
+            android:onClick="openShopping" />
+
+        <Button
+            android:id="@+id/btnQuickReports"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:backgroundTint="#E2F3E4"
+            android:text="Reports"
+            android:textAllCaps="false"
+            android:textColor="#2E7D32"
+            android:textSize="11sp"
+            android:onClick="openReports" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Recent spending"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="#212121" />
+
+            <TextView
+                android:id="@+id/tvSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See all"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="#2E7D32"
+                android:onClick="openExpenses" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewRecent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#EEEEEE"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#E2F3E4"
+            android:text="Home"
+            android:textAllCaps="false"
+            android:textColor="#2E7D32"
+            android:textSize="11sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Expenses"
+            android:textAllCaps="false"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            android:onClick="openExpenses" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Budget"
+            android:textAllCaps="false"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            android:onClick="openBudget" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Shopping"
+            android:textAllCaps="false"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            android:onClick="openShopping" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Reports"
+            android:textAllCaps="false"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            android:onClick="openReports" />
+    </LinearLayout>
+
+</LinearLayout>
